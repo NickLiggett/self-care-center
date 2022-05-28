@@ -26,14 +26,16 @@ function submitNewMsg() {
   newMessageInputBox.value = ''
   newMessageInputBox.classList.add('hidden')
   newMessageInputBox.classList.remove('visible')
-  meditationIcon.classList.remove('hidden')
-  meditationIcon.classList.add('visible')
   submitNewMessageBtn.classList.remove('visible')
   submitNewMessageBtn.classList.add('hidden')
   errorHandlingMessage.classList.remove('visible')
   errorHandlingMessage.classList.add('hidden')
   receiveMessageBtn.classList.add('visible')
   receiveMessageBtn.classList.remove('hidden')
+  clearBtn.classList.add('visible')
+  clearBtn.classList.remove('hidden')
+  message.classList.add('visible')
+  message.classList.remove('hidden')
 }
 
 

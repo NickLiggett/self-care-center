@@ -23,19 +23,24 @@ function submitNewMsg() {
 } else if (checkbox2.checked === true && mantras.includes(newMessageInputBox.value) === false) {
   mantras.push(newMessageInputBox.value)
 }
-  newMessageInputBox.value = ''
+
   newMessageInputBox.classList.add('hidden')
   newMessageInputBox.classList.remove('visible')
-  submitNewMessageBtn.classList.remove('visible')
-  submitNewMessageBtn.classList.add('hidden')
+  // submitNewMessageBtn.classList.remove('visible')
+  // submitNewMessageBtn.classList.add('hidden')
   errorHandlingMessage.classList.remove('visible')
   errorHandlingMessage.classList.add('hidden')
   receiveMessageBtn.classList.add('visible')
   receiveMessageBtn.classList.remove('hidden')
   clearBtn.classList.add('visible')
   clearBtn.classList.remove('hidden')
+  addMessageBtn.classList.add('hidden')
+  addMessageBtn.classList.remove('visible')
+
+  message.innerText = newMessageInputBox.value
   message.classList.add('visible')
   message.classList.remove('hidden')
+  newMessageInputBox.value = ''
 }
 
 
@@ -56,6 +61,8 @@ function showAddMessageInput() {
   message.classList.add('hidden')
   receiveMessageBtn.classList.remove('visible')
   receiveMessageBtn.classList.add('hidden')
+  addMessageBtn.classList.add('hidden')
+  addMessageBtn.classList.remove('visible')
   newMessageInputBox.focus()
 }
 

@@ -69,6 +69,7 @@ h2 {
   height: 30px;
   width: 120px;
   margin-top: 10px;
+  margin-bottom: 30px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -77,8 +78,8 @@ h2 {
 .add-div {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: -20px;
+  margin-top: 40px;
+  margin-bottom: -50px;
 }
 
 .box-2 {
@@ -88,7 +89,7 @@ h2 {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3em;
+  margin-top: 50px;
   margin-bottom: -80px;
   display: flex;
   flex-direction: column;
@@ -112,8 +113,9 @@ margin-bottom: -10px;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   width: 500px;
-  margin-bottom: 60px;
-  margin-top: -20px;
+  margin-bottom: 40px;
+  margin-top: -10px;
+  text-align: center;
 }
 
 .text-box {
@@ -121,7 +123,7 @@ margin-bottom: -10px;
   justify-content: center;
   text-align: center;
   margin-top: -100px;
-  margin-bottom: auto;
+  margin-bottom: 0px;
   width: 700px;
   height: 90px;
   font-size: x-large;
@@ -161,7 +163,7 @@ margin-bottom: -10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: -60px;
+  margin-bottom: 155px;
 }
 
 
@@ -178,8 +180,8 @@ margin-bottom: -10px;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: 120px
+  margin-top: -180px;
+  margin-bottom: 90px;
 }
 
 form {

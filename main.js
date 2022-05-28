@@ -23,11 +23,10 @@ function submitNewMsg() {
 } else if (checkbox2.checked === true && mantras.includes(newMessageInputBox.value) === false) {
   mantras.push(newMessageInputBox.value)
 }
-
   newMessageInputBox.classList.add('hidden')
   newMessageInputBox.classList.remove('visible')
-  // submitNewMessageBtn.classList.remove('visible')
-  // submitNewMessageBtn.classList.add('hidden')
+  submitNewMessageBtn.classList.remove('visible')
+  submitNewMessageBtn.classList.add('hidden')
   errorHandlingMessage.classList.remove('visible')
   errorHandlingMessage.classList.add('hidden')
   receiveMessageBtn.classList.add('visible')
@@ -36,7 +35,6 @@ function submitNewMsg() {
   clearBtn.classList.remove('hidden')
   addMessageBtn.classList.add('hidden')
   addMessageBtn.classList.remove('visible')
-
   message.innerText = newMessageInputBox.value
   message.classList.add('visible')
   message.classList.remove('hidden')
@@ -65,7 +63,6 @@ function showAddMessageInput() {
   addMessageBtn.classList.remove('visible')
   newMessageInputBox.focus()
 }
-
 
 function clearMessage() {
   meditationIcon.classList.remove('hidden')
@@ -115,19 +112,11 @@ function uncheckRadioButton1() {
   }
 }
 
-
-
-
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
-
-
-
 // vvv Message List vvv
-
-
 
 var mantras = ['Breathing in, I send myself love.',
 'Breathing out, I send love to someone else who needs it.',

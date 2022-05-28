@@ -5,37 +5,84 @@ var checkbox1 = document.querySelector('.checkbox1')
 var checkbox2 = document.querySelector('.checkbox2')
 var clearBtn = document.querySelector('.clear-button')
 var addMessageBtn = document.querySelector('.add-message-button')
-var addMessageInput = document.querySelector('.text-box-area')
+var newMessageInputBox = document.querySelector('.text-box')
+var submitNewMessageBtn = document.querySelector('.submit-button')
+var errorHandlingMessage = document.querySelector('.error-handling-text')
+
 
 receiveMessageBtn.addEventListener('click', receiveMessage)
 checkbox1.addEventListener('click', uncheckRadioButton2)
 checkbox2.addEventListener('click', uncheckRadioButton1)
 clearBtn.addEventListener('click', clearMessage)
 addMessageBtn.addEventListener('click', showAddMessageInput)
+submitNewMessageBtn.addEventListener('click', submitNewMsg)
+
+function submitNewMsg() {
+    if (checkbox1.checked === true && affirmations.includes(newMessageInputBox.value) === false){
+    affirmations.push(newMessageInputBox.value)
+} else if (checkbox2.checked === true && mantras.includes(newMessageInputBox.value) === false) {
+  mantras.push(newMessageInputBox.value)
+}
+  newMessageInputBox.value = ''
+  newMessageInputBox.classList.add('hidden')
+  newMessageInputBox.classList.remove('visible')
+  meditationIcon.classList.remove('hidden')
+  meditationIcon.classList.add('visible')
+  submitNewMessageBtn.classList.remove('visible')
+  submitNewMessageBtn.classList.add('hidden')
+  errorHandlingMessage.classList.remove('visible')
+  errorHandlingMessage.classList.add('hidden')
+  receiveMessageBtn.classList.add('visible')
+  receiveMessageBtn.classList.remove('hidden')
+}
+
+
+
 
 function showAddMessageInput() {
-  meditationIcon.classList.add("hidden")
-  addMessageInput.classList.remove('hidden')
-  addMessageInput.classList.add('visible')
+  meditationIcon.classList.add('hidden')
+  meditationIcon.classList.remove('visible')
+  newMessageInputBox.classList.remove('hidden')
+  newMessageInputBox.classList.add('visible')
+  submitNewMessageBtn.classList.remove('hidden')
+  submitNewMessageBtn.classList.add('visible')
+  clearBtn.classList.remove('visible')
+  clearBtn.classList.add('hidden')
+  errorHandlingMessage.classList.remove('hidden')
+  errorHandlingMessage.classList.add('visible')
+  message.classList.remove('visible')
+  message.classList.add('hidden')
+  receiveMessageBtn.classList.remove('visible')
+  receiveMessageBtn.classList.add('hidden')
+  newMessageInputBox.focus()
 }
 
 
 function clearMessage() {
-  meditationIcon.classList.remove("hidden")
-  meditationIcon.classList.add("visible")
-  clearBtn.classList.remove("visible")
-  message.classList.remove("visible")
-  message.classList.add("hidden")
+  meditationIcon.classList.remove('hidden')
+  meditationIcon.classList.add('visible')
+  clearBtn.classList.remove('visible')
+  clearBtn.classList.add('hidden')
+  message.classList.remove('visible')
+  message.classList.add('hidden')
+  addMessageBtn.classList.remove('hidden')
+  addMessageBtn.classList.add('visible')
 }
 
 function receiveMessage() {
   if (checkbox1.checked === true || checkbox2.checked === true){
   chooseMessage()
-  meditationIcon.classList.add("hidden")
-  meditationIcon.classList.remove("visible")
-  clearBtn.classList.add("visible")
-  message.classList.add("visible")
-  message.classList.remove("hidden")
+  meditationIcon.classList.add('hidden')
+  meditationIcon.classList.remove('visible')
+  clearBtn.classList.add('visible')
+  message.classList.add('visible')
+  message.classList.remove('hidden')
+  submitNewMessageBtn.classList.add('hidden')
+  submitNewMessageBtn.classList.remove('visible')
+  newMessageInputBox.classList.add('hidden')
+  newMessageInputBox.classList.remove('visible')
+  addMessageBtn.classList.add('hidden')
+  addMessageBtn.classList.remove('visible')
 }
 }
 
